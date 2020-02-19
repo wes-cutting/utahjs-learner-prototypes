@@ -4,10 +4,13 @@ const hero = {
     heritage: 'Gothamite'
   }
   
-  const sideKick = Object.create(hero)
+  const sideKick = Object.create( hero)
+  const sideKick2 = Object.assign( {}, hero)
   sideKick.name = 'Robin'
   sideKick.age = 9
+  hero.heritage = 'Magic'
   
   console.log(sideKick.name) // Robin
   console.log(sideKick.age) // 9
-  console.log(sideKick.heritage) // Gothamite
+  console.log(sideKick.heritage) // Magic
+  console.log(sideKick2.heritage) // Gothamite

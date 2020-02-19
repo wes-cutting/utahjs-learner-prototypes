@@ -29,3 +29,5 @@ const batsy = Hero('Batman', 10)
 supes.scheme(10)
 batsy.saveTheDay(5)
 
+console.log(supes.__proto__ === batsy.__proto__)
+

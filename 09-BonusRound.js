@@ -33,31 +33,34 @@ for(let key in batsy) {
     console.log(`Key: ${key}. Value: ${batsy[key]}`)
 }
 
-function Hero (name, power) {
+function Hero2 (name, power) {
     this.name = name
     this.energy = power
 }
 
-Hero.prototype.scheme = function (amount) {
+Hero2.prototype.scheme = function (amount) {
     console.log(`${this.name} is Scheming.`)
     this.power += amount
 }     
-Hero.prototype.regroup = function (length) {
+Hero2.prototype.regroup = function (length) {
     console.log(`${this.name} is Regrouping.`)
     this.power += length
 }   
-Hero.prototype.saveTheDay = function (length) {
+Hero2.prototype.saveTheDay = function (length) {
     console.log(`${this.name} is Saving the Day.`)
     this.power -= length
 }
-Hero.prototype.unite = function (ally){
+Hero2.prototype.unite = function (ally){
     console.log(`${this.name} unites with ${ally.name}`)
     this.power -= ally.power
 }
   
-console.log('Class Keys')
-for(let key in batsy) {
-    console.log(`Key: ${key}. Value: ${batsy[key]}`)
+const supes = new Hero2('Superman', 7)
+console.log('Class Keys 2')
+for(let key in supes) {
+    if(supes.hasOwnProperty(key)){
+        console.log(`Key: ${key}. Value: ${supes[key]}`)
+    }
 }
 
 

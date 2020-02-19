@@ -4,22 +4,27 @@ const heroMethods = {
         this.power += amount
     },      
     regroup(length) {
-        console.log(`${this.name} is Regrouping.`)
+        console.log(`${this.name} is Regrouping!!!`)
         this.power += length
     },      
     saveTheDay(length) {
         console.log(`${this.name} is Saving the Day.`)
         this.power -= length
     },
+    unite(ally){
+        console.log(`${this.name} unites with ${ally.name}`)
+        this.power += ally.power
+    }
 }
 
 function Hero (name, power) {
     let hero = {}
     hero.name = name
     hero.energy = power
-    hero.eat = heroMethods.scheme
-    hero.sleep = heroMethods.regroup
-    hero.play = heroMethods.saveTheDay
+    hero.scheme = heroMethods.scheme
+    hero.regroup = heroMethods.regroup
+    hero.saveTheDay = heroMethods.saveTheDay
+    hero.unite = heroMethods.unite
 
     return hero
 }
@@ -27,7 +32,5 @@ function Hero (name, power) {
 const supes = Hero('Superman', 7)
 const batsy = Hero('Batman', 10)
 
-// unite(ally){
-//     console.log(`${this.name} unites with ${ally.name}`)
-//     this.power -= ally.power
-// }
+console.log(batsy.regroup())
+console.log(supes.regroup())
