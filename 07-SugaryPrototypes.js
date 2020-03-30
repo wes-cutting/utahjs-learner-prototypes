@@ -1,6 +1,6 @@
 function Hero (name, power) {
     this.name = name
-    this.energy = power
+    this.power = power
 }
 
 Hero.prototype.scheme = function (amount) {

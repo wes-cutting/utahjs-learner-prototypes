@@ -1,7 +1,7 @@
 function Hero (name, power) {
     let hero = Object.create(Hero.prototype)
     hero.name = name
-    hero.energy = power
+    hero.power = power
 
     return hero
 }

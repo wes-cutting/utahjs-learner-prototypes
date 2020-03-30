@@ -20,7 +20,7 @@ const heroMethods = {
 function Hero (name, power) {
     let hero =  Object.create(heroMethods)
     hero.name = name
-    hero.energy = power
+    hero.power = power
 
     return hero
 }

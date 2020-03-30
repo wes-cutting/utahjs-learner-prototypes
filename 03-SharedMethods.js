@@ -20,7 +20,7 @@ const heroMethods = {
 function Hero (name, power) {
     let hero = {}
     hero.name = name
-    hero.energy = power
+    hero.power = power
     hero.scheme = heroMethods.scheme
     hero.regroup = heroMethods.regroup
     hero.saveTheDay = heroMethods.saveTheDay
